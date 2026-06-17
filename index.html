@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="The Hardware OS — a practitioner's book, simulation training, and engineering tools for hardware engineers. By Steve Embleton.">
+  <meta name="description" content="The Hardware OS — how engineering leads keep requirements, decisions, and evidence tied to what the build actually proves. By Steve Embleton.">
   <link rel="canonical" href="https://thehardwareos.com/">
-  <title>The Hardware OS — Engineering at depth</title>
+  <title>The Hardware OS — Steve Embleton</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,124 +17,211 @@
   <header class="site-header" role="banner">
     <div class="container">
       <a href="/" class="site-logo">The Hardware OS</a>
-      <nav aria-label="Site navigation">
-        <ul class="site-nav">
-          <li><a href="#book">Book</a></li>
-          <li><a href="https://simulation.thehardwareos.com" rel="noopener">Simulation</a></li>
-          <li><a href="#tools">Tools</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
+  <!-- ── Hero ───────────────────────────────────────────────────────────── -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="container">
-      <span class="hero-eyebrow">Steve Embleton</span>
-      <h1 id="hero-heading">The Hardware&nbsp;OS</h1>
-      <p class="hero-tagline">
-        Engineering at depth. A practitioner's book, simulation training, and
-        tools for hardware engineers who need to go further.
-      </p>
+    <div class="container hero-layout">
+
+      <!--
+      COVER_HOOK — add cover image here when available
+      <div class="hero-cover" aria-hidden="true">
+        <img src="assets/img/cover.jpg" alt="The Hardware OS book cover" width="280" height="420">
+      </div>
+      -->
+
+      <div class="hero-text">
+        <span class="hero-byline">Steve Embleton</span>
+        <h1 id="hero-heading">The Hardware&nbsp;OS</h1>
+        <p class="hero-sub">
+          How engineering leads keep requirements, decisions, and evidence tied
+          to what the build actually proves — and what to do when drift starts.
+        </p>
+        <div class="hero-actions">
+          <!--
+          AMAZON_HOOK — replace href and uncomment when live
+          <a href="https://amazon.com/dp/ASIN" class="btn-primary" rel="noopener" target="_blank">Buy on Amazon</a>
+          <a href="https://audible.com/pd/ASIN" class="btn-secondary" rel="noopener" target="_blank">Listen on Audible</a>
+          -->
+          <span class="btn-coming">Available soon — Amazon &amp; Audible</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <main id="main-content">
-    <div class="container">
 
-      <header class="sect-header">
-        <span class="sect-label">Resources</span>
-        <h2>Book, training, and tools</h2>
-        <p>
-          Each resource is self-contained. Start with the book for the program
-          management framework, simulation training for hands-on FEA and CFD
-          workflows, or tools for quick engineering calculations.
+    <!-- ── About ──────────────────────────────────────────────────────────── -->
+    <section class="book-section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="prose-block">
+          <span class="section-label">About the book</span>
+          <h2 id="about-heading">The gap between the decision and the test result</h2>
+          <p>
+            Hardware programs fail in a predictable pattern: requirements drift from what
+            the physics actually demands, decisions get made without a clear owner, and
+            the test results arrive too late to change what was already built. Everyone
+            is working. No one agrees on what "locked" means.
+          </p>
+          <p>
+            The Hardware OS is the operating procedure for hardware programs — a shared
+            rule for how requirements are written, how decisions get made and recorded,
+            how evidence changes the plan, and how that discipline is installed in
+            an organization that is already in motion.
+          </p>
+          <p>
+            This is not a management theory book. It is a practitioner's guide written
+            by an engineer who has run programs that failed the old way and then fixed them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Who it's for ───────────────────────────────────────────────────── -->
+    <section class="book-section book-section--alt" aria-labelledby="audience-heading">
+      <div class="container">
+        <span class="section-label">Who this is for</span>
+        <h2 id="audience-heading">Written for engineers running programs, not projects</h2>
+        <ul class="audience-list" role="list">
+          <li>
+            <strong>Engineering leads</strong> who are responsible for a hardware program
+            from concept to production and find that the build always diverges from the
+            decisions made in the review room.
+          </li>
+          <li>
+            <strong>Systems engineers</strong> who write requirements and watch them
+            get softened, stacked with margin, or quietly abandoned as schedules compress.
+          </li>
+          <li>
+            <strong>Program managers</strong> on hardware programs who need a technically
+            credible framework — not a generic PM methodology — for keeping the program
+            honest as evidence arrives.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Contents ───────────────────────────────────────────────────────── -->
+    <section class="book-section" aria-labelledby="contents-heading">
+      <div class="container">
+        <span class="section-label">Contents</span>
+        <h2 id="contents-heading">Twenty chapters in five parts</h2>
+        <ol class="parts-list" role="list">
+
+          <li class="part">
+            <h3>Part I — Why Hardware Programs Break</h3>
+            <ol class="chapter-list">
+              <li>The Missing Manual</li>
+              <li>Process Is the Product</li>
+              <li>Failure Patterns: Chaos, Drift, and Unowned Decisions</li>
+            </ol>
+          </li>
+
+          <li class="part">
+            <h3>Part II — The Hardware OS Core</h3>
+            <ol class="chapter-list" start="4">
+              <li>DRI Ownership and Decision Authority</li>
+              <li>Spec Integrity and Requirement Hygiene</li>
+              <li>Gates, Risk Registers, and One-Page Truth</li>
+              <li>Automation Decisions at Concept Stage</li>
+              <li>Schedule from Real Dependencies and Honest Critical Path</li>
+            </ol>
+          </li>
+
+          <li class="part">
+            <h3>Part III — Technical Evidence That Changes Program Decisions</h3>
+            <ol class="chapter-list" start="9">
+              <li>Requirements Lifecycle: Hypothesis → Bless → Evidence → Revise</li>
+              <li>Requirements from Physics, Not Stacked Buffers</li>
+              <li>Many Factors, One Honest Limit</li>
+              <li>Models and Tests That Change Decisions</li>
+              <li>Fleet as Instrumented Experiment</li>
+              <li>Risk and How We Define Done on Paper</li>
+            </ol>
+          </li>
+
+          <li class="part">
+            <h3>Part IV — Running the Organization</h3>
+            <ol class="chapter-list" start="15">
+              <li>What Every Tier Wants: Exec to Supplier</li>
+              <li>First Article: Fast, Disciplined Iteration</li>
+              <li>Supplier Data, Critical Characteristics, and Producibility</li>
+            </ol>
+          </li>
+
+          <li class="part">
+            <h3>Part V — Adoption and Scale</h3>
+            <ol class="chapter-list" start="18">
+              <li>Rollout Sequence: Triage Then System</li>
+              <li>Training, Cadence, and Failure Recovery</li>
+              <li>What This OS Does Not Cover</li>
+            </ol>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Author ─────────────────────────────────────────────────────────── -->
+    <section class="book-section book-section--alt" aria-labelledby="author-heading">
+      <div class="container">
+        <div class="prose-block">
+          <span class="section-label">About the author</span>
+          <h2 id="author-heading">Steve Embleton</h2>
+          <p>
+            Steve Embleton is a hardware engineering lead with experience running
+            power electronics programs from concept through production. He has worked
+            on programs where the OS described in this book was missing — and on programs
+            where it was installed partway through, under schedule pressure, and worked.
+          </p>
+          <p>
+            He also writes simulation training for power electronics engineers at
+            <a href="https://simulation.thehardwareos.com" rel="noopener">simulation.thehardwareos.com</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Buy ────────────────────────────────────────────────────────────── -->
+    <section class="book-section buy-section" aria-labelledby="buy-heading">
+      <div class="container">
+        <span class="section-label">Get the book</span>
+        <h2 id="buy-heading">Available in print, ebook, and audio</h2>
+        <p class="buy-sub">
+          Print and ebook on Amazon. Audiobook on Audible and major platforms.
+          The ebook is also available on Apple Books, Kobo, and Google Play.
         </p>
-      </header>
-
-      <ul class="content-grid" role="list">
-
-        <!-- Book -->
-        <li class="content-card" id="book">
-          <span class="card-type-label">Book</span>
-          <h3>The Hardware OS</h3>
-          <p>
-            How engineering leads keep requirements, decisions, and evidence
-            tied to what the build actually proves — and what to do when
-            drift starts.
-          </p>
-          <ul class="card-tags" aria-label="Topics">
-            <li class="tag">Program management</li>
-            <li class="tag">Requirements</li>
-            <li class="tag">Decision authority</li>
-            <li class="tag">Risk</li>
-          </ul>
-          <div class="card-actions">
-            <!--
-            AMAZON_HOOK — replace href when live
-            <a href="https://amazon.com/dp/ASIN" class="card-cta" rel="noopener" target="_blank">Buy on Amazon &rarr;</a>
-            <a href="https://audible.com/pd/ASIN" class="card-cta-secondary" rel="noopener" target="_blank">Listen on Audible</a>
-            -->
-            <a href="#" class="card-cta" aria-disabled="true">Amazon — coming soon</a>
+        <div class="buy-actions">
+          <!--
+          AMAZON_HOOK — replace href and uncomment when live
+          <a href="https://amazon.com/dp/ASIN" class="btn-primary" rel="noopener" target="_blank">Buy on Amazon</a>
+          <a href="https://audible.com/pd/ASIN" class="btn-secondary" rel="noopener" target="_blank">Listen on Audible</a>
+          <a href="https://books.apple.com/ASIN" class="btn-tertiary" rel="noopener" target="_blank">Apple Books</a>
+          -->
+          <span class="btn-coming">Coming soon — links will appear here at launch</span>
+        </div>
+        <!--
+        EMAIL_HOOK — uncomment and wire up to Mailchimp / ConvertKit for launch list
+        <form class="email-capture" action="#" method="post" aria-label="Email notification signup">
+          <label for="email-input" class="email-label">Notify me at launch</label>
+          <div class="email-row">
+            <input id="email-input" type="email" name="email" placeholder="you@example.com" required class="email-input">
+            <button type="submit" class="btn-primary">Notify me</button>
           </div>
-        </li>
+        </form>
+        -->
+      </div>
+    </section>
 
-        <!-- Simulation Training -->
-        <li class="content-card">
-          <span class="card-type-label">Simulation Training</span>
-          <h3>FEA for Power Electronics</h3>
-          <p>
-            Practical workflows for structural, thermal, and electromagnetic
-            analysis of power electronics hardware — heatsinks, PCBs,
-            enclosures, busbars, and transformers. Worked in ANSYS.
-          </p>
-          <ul class="card-tags" aria-label="Topics">
-            <li class="tag">Thermal CFD</li>
-            <li class="tag">Structural</li>
-            <li class="tag">Electromagnetics</li>
-            <li class="tag">Seven phases</li>
-          </ul>
-          <div class="card-actions">
-            <a href="https://simulation.thehardwareos.com" class="card-cta" rel="noopener">Open training &rarr;</a>
-          </div>
-        </li>
-
-        <!-- Engineering Tools -->
-        <li class="content-card content-card--muted" id="tools">
-          <span class="card-type-label">Engineering Tools</span>
-          <h3>Calculators &amp; References</h3>
-          <p>
-            Thermal resistance, busbar sizing, derating, and other
-            calculators for power electronics hardware. Engineering
-            references for rapid design checks.
-          </p>
-          <ul class="card-tags" aria-label="Topics">
-            <li class="tag">Thermal</li>
-            <li class="tag">Electrical</li>
-            <li class="tag">Mechanical</li>
-          </ul>
-          <p class="card-coming">Coming soon</p>
-        </li>
-
-      </ul>
-
-    </div>
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <span class="footer-license">
-        &copy; 2026 Steve Embleton
-      </span>
-      <span class="footer-note">thehardwareos.com</span>
+      <span class="footer-copy">&copy; 2026 Steve Embleton</span>
+      <span class="footer-right">thehardwareos.com</span>
     </div>
-    <!--
-    AUDIBLE_HOOK — Uncomment when Audible listing is live
-    <div class="container" style="padding-top:0; border-top: 1px solid var(--c-border-light); margin-top: 0;">
-      <p style="font-size:0.875rem; color: var(--c-text-muted);">
-        Also available as an audiobook: <a href="https://audible.com/pd/ASIN" rel="noopener">Listen on Audible</a>
-      </p>
-    </div>
-    -->
   </footer>
 
 </body>
