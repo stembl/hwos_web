@@ -3,7 +3,7 @@
    Book landing page. Design: unified surface (DEC-003 heritage), zinc/amber.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* System font stack — Helvetica Neue on macOS/iOS, Arial on Windows */
 
 /* --------------------------------------------------------------------------
    Tokens — light mode
@@ -22,7 +22,7 @@
   --c-accent:       #D97706;   /* amber-600 */
   --c-accent-hover: #B45309;   /* amber-700 */
 
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --t-xs:   0.75rem;
   --t-sm:   0.875rem;
