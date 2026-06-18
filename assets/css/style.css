@@ -427,17 +427,196 @@ main { flex: 1; }
 }
 
 /* --------------------------------------------------------------------------
+   Hero subtitle formats line
+   -------------------------------------------------------------------------- */
+.hero-formats {
+  font-size: var(--t-xs);
+  color: var(--c-text-subtle);
+  margin-top: var(--s-3);
+}
+.hero-formats a { color: var(--c-text-subtle); text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
+   Excerpt / pull quote
+   -------------------------------------------------------------------------- */
+.excerpt-section {
+  background: var(--c-bg-alt);
+}
+
+.book-excerpt {
+  margin: 0;
+  padding: var(--s-8) var(--s-8) var(--s-8) var(--s-8);
+  border-left: 3px solid var(--c-accent);
+  max-width: 68ch;
+}
+
+.book-excerpt p {
+  font-size: var(--t-base);
+  line-height: 1.8;
+  color: var(--c-text-muted);
+  margin-bottom: var(--s-3);
+}
+
+.book-excerpt .excerpt-verdict {
+  font-size: var(--t-lg);
+  font-weight: 600;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+  margin-top: var(--s-5);
+  margin-bottom: var(--s-5);
+}
+
+.book-excerpt cite {
+  display: block;
+  font-size: var(--t-xs);
+  font-style: normal;
+  color: var(--c-text-subtle);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: var(--s-5);
+}
+
+/* --------------------------------------------------------------------------
+   Audience + Not-for two-column grid
+   -------------------------------------------------------------------------- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-12);
+  align-items: start;
+}
+
+.not-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.not-list li {
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+  line-height: 1.6;
+  padding-left: var(--s-4);
+  position: relative;
+}
+
+.not-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--c-text-subtle);
+}
+
+.not-footnote {
+  font-size: var(--t-xs);
+  color: var(--c-text-subtle);
+  line-height: 1.6;
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-border);
+}
+
+/* --------------------------------------------------------------------------
+   Outcomes section
+   -------------------------------------------------------------------------- */
+.outcomes-section {
+  background: var(--c-text);
+  color: var(--c-bg);
+}
+
+.outcomes-section .section-label {
+  color: var(--c-accent);
+}
+
+.outcomes-section h2 {
+  color: var(--c-bg) !important;
+}
+
+.outcomes-intro {
+  font-size: var(--t-base);
+  color: rgba(250,250,250,0.65);
+  margin-bottom: var(--s-6);
+  max-width: 54ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  .outcomes-section {
+    background: var(--c-bg-alt);
+    color: var(--c-text);
+  }
+  .outcomes-section h2 { color: var(--c-text) !important; }
+  .outcomes-intro { color: var(--c-text-muted); }
+  .outcomes-list li { color: var(--c-text-muted); border-color: var(--c-border); }
+  .outcomes-close { color: var(--c-text-muted); }
+}
+
+.outcomes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  counter-reset: outcomes-counter;
+  max-width: 58ch;
+  margin-bottom: var(--s-8);
+}
+
+.outcomes-list li {
+  font-size: var(--t-base);
+  color: rgba(250,250,250,0.8);
+  line-height: 1.7;
+  display: flex;
+  gap: var(--s-4);
+  align-items: baseline;
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.outcomes-list li::before {
+  content: counter(outcomes-counter, decimal-leading-zero);
+  counter-increment: outcomes-counter;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  color: var(--c-accent);
+  min-width: 2ch;
+  flex-shrink: 0;
+}
+
+.outcomes-close {
+  font-size: var(--t-base);
+  font-weight: 500;
+  color: rgba(250,250,250,0.9);
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Part descriptions
+   -------------------------------------------------------------------------- */
+.part-desc {
+  font-size: var(--t-sm);
+  color: var(--c-text-subtle);
+  line-height: 1.6;
+  max-width: 62ch;
+  margin-bottom: var(--s-3);
+}
+
+/* --------------------------------------------------------------------------
+   Buy section link
+   -------------------------------------------------------------------------- */
+.buy-sub a { color: var(--c-accent); }
+.buy-sub a:hover { color: var(--c-accent-hover); }
+
+/* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .hero { padding-block: var(--s-12) var(--s-10); }
-
   .hero h1 { font-size: var(--t-3xl); }
-
   .book-section { padding-block: var(--s-12); }
-
+  .audience-grid { grid-template-columns: 1fr; gap: var(--s-10); }
   .email-row { flex-direction: column; }
   .email-row .btn-primary { align-self: flex-start; }
-
   .site-footer .container { flex-direction: column; align-items: flex-start; }
+  .book-excerpt { padding: var(--s-6); }
 }
