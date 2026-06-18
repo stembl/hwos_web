@@ -11,18 +11,19 @@
 :root {
   color-scheme: light dark;
 
-  --c-bg:           #FFFFFF;
-  --c-bg-alt:       #F9F9F9;   /* zinc-50 — alternate section bg */
+  --c-bg:           #FAFAFA;   /* zinc-50 — not pure white, ~19:1 contrast */
+  --c-bg-alt:       #F4F4F5;   /* zinc-100 — alternate section bg */
   --c-border:       #E4E4E7;   /* zinc-200 */
 
   --c-text:         #09090B;   /* zinc-950 */
   --c-text-muted:   #71717A;   /* zinc-500 */
   --c-text-subtle:  #A1A1AA;   /* zinc-400 */
 
-  --c-accent:       #D97706;   /* amber-600 */
-  --c-accent-hover: #B45309;   /* amber-700 */
+  --c-accent:       #B45309;   /* amber-700 — 5.8:1 on #FAFAFA, passes WCAG AA */
+  --c-accent-hover: #92400E;   /* amber-800 */
 
-  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Cascadia Code", "Fira Code", Consolas, monospace;
 
   --t-xs:   0.75rem;
   --t-sm:   0.875rem;
@@ -49,11 +50,11 @@
    -------------------------------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-bg:          #09090B;
-    --c-bg-alt:      #111113;   /* barely lifted from pure black */
+    --c-bg:          #18181B;   /* zinc-900 — not black, no halation */
+    --c-bg-alt:      #27272A;   /* zinc-800 */
     --c-border:      #27272A;
 
-    --c-text:        #FAFAFA;
+    --c-text:        #D4D4D8;   /* zinc-300 — ~11:1 on zinc-900, no glow */
     --c-text-muted:  #A1A1AA;
     --c-text-subtle: #52525B;
 
