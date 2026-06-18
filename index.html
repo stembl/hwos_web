@@ -40,10 +40,13 @@
           <!--
           AMAZON_HOOK — replace href and uncomment when live
           <a href="https://amazon.com/dp/ASIN" class="btn-secondary" rel="noopener" target="_blank">Buy on Amazon</a>
+          -->
+          <!--
+          AUDIBLE_HOOK — replace href and uncomment when live
           <a href="https://audible.com/pd/ASIN" class="btn-secondary" rel="noopener" target="_blank">Listen on Audible</a>
           -->
-          <span class="btn-coming">Print &amp; Audible — coming soon</span>
         </div>
+        <p class="hero-formats">Also available in print, ebook, and audio — links at the bottom of this page.</p>
       </div>
 
     </div>
@@ -51,27 +54,42 @@
 
   <main id="main-content">
 
+    <!-- ── Excerpt ────────────────────────────────────────────────────────── -->
+    <section class="book-section excerpt-section" aria-label="Book excerpt">
+      <div class="container">
+        <blockquote class="book-excerpt">
+          <p>Monday. 6:47&nbsp;a.m. Parking-lot light still&nbsp;on — messages already stacking before the standup.</p>
+          <p>The thermal limit changed again.</p>
+          <p>Mechanical already cut metal to last week's number. Electrical has a new test trace that says the old number was optimistic. The supplier says they never got the last revision anyway. The program manager is trying to hold the date everyone committed in the first quarter — and your executive wants a one-page update by noon: <em>Are we still on track or not?</em></p>
+          <p class="excerpt-verdict">Everyone is working. Nobody is slacking. The program is still drifting.</p>
+          <cite>— Chapter 1: The Missing Manual</cite>
+        </blockquote>
+      </div>
+    </section>
+
     <!-- ── About ──────────────────────────────────────────────────────────── -->
     <section class="book-section" aria-labelledby="about-heading">
       <div class="container">
         <div class="prose-block">
           <span class="section-label">About the book</span>
-          <h2 id="about-heading">The gap between the decision and the test result</h2>
+          <h2 id="about-heading">The operating procedure for hardware programs</h2>
           <p>
             Hardware programs fail in a predictable pattern: requirements drift from what
             the physics actually demands, decisions get made without a clear owner, and
-            the test results arrive too late to change what was already built. Everyone
-            is working. No one agrees on what "locked" means.
+            test results arrive too late to change what was already built.
+            It is usually not weak engineers. It is usually no manual for the process —
+            no agreed way for work to cross team lines, no shared rule for what
+            "locked" means when new data shows up, no single page where that story stays
+            true before the room invents a new one.
           </p>
           <p>
-            The Hardware OS is the operating procedure for hardware programs — a shared
-            rule for how requirements are written, how decisions get made and recorded,
-            how evidence changes the plan, and how that discipline is installed in
-            an organization that is already in motion.
+            The Hardware OS is that manual. A shared operating procedure for how
+            requirements are written, how decisions get made and recorded, how evidence
+            changes the plan, and how that discipline is installed in an organization
+            already in motion.
           </p>
           <p>
-            This is not a management theory book. It is a practitioner's guide written
-            by an engineer who has run programs that failed the old way and then fixed them.
+            Process is the product — the system being built while the hardware is being built.
           </p>
         </div>
       </div>
@@ -80,24 +98,87 @@
     <!-- ── Who it's for ───────────────────────────────────────────────────── -->
     <section class="book-section book-section--alt" aria-labelledby="audience-heading">
       <div class="container">
-        <span class="section-label">Who this is for</span>
-        <h2 id="audience-heading">Written for engineers running programs, not projects</h2>
-        <ul class="audience-list" role="list">
-          <li>
-            <strong>Engineering leads</strong> who are responsible for a hardware program
-            from concept to production and find that the build always diverges from the
-            decisions made in the review room.
-          </li>
-          <li>
-            <strong>Systems engineers</strong> who write requirements and watch them
-            get softened, stacked with margin, or quietly abandoned as schedules compress.
-          </li>
-          <li>
-            <strong>Program managers</strong> on hardware programs who need a technically
-            credible framework — not a generic PM methodology — for keeping the program
-            honest as evidence arrives.
-          </li>
-        </ul>
+        <div class="audience-grid">
+          <div>
+            <span class="section-label">Who this is for</span>
+            <h2 id="audience-heading">Written for engineers running programs, not&nbsp;projects</h2>
+            <ul class="audience-list" role="list">
+              <li>
+                <strong>Engineering leads</strong> responsible for a hardware program from concept
+                to production — where the build always diverges from the decisions made in the review room.
+              </li>
+              <li>
+                <strong>Systems engineers</strong> who write requirements and watch them get softened,
+                stacked with margin, or quietly abandoned as schedules compress.
+              </li>
+              <li>
+                <strong>Program managers</strong> on hardware programs who need a technically
+                credible framework — not a generic PM methodology — for keeping the program
+                honest as evidence arrives.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="section-label">What this is not</span>
+            <h2 id="not-for-heading">What this OS does not replace</h2>
+            <ul class="not-list" role="list">
+              <li>Domain safety lifecycles and safety case obligations</li>
+              <li>Regulatory compliance and certification requirements</li>
+              <li>Design-history or quality-system obligations</li>
+              <li>Specialist disciplines: tolerance, reliability, hazard analysis, manufacturing capability</li>
+              <li>A textbook on simulation, structured experiments, or GD&amp;T</li>
+            </ul>
+            <p class="not-footnote">
+              If your product sits in a regulated domain, those obligations remain primary.
+              This OS mounts underneath them — it does not replace them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── What you get ───────────────────────────────────────────────────── -->
+    <section class="book-section outcomes-section" aria-labelledby="outcomes-heading">
+      <div class="container">
+        <span class="section-label">What this delivers</span>
+        <h2 id="outcomes-heading">A narrower promise — and a more useful one</h2>
+        <p class="outcomes-intro">
+          The OS does not remove uncertainty. Hardware work stays cross-functional and time-constrained.
+          The promise is:
+        </p>
+        <ol class="outcomes-list" role="list">
+          <li>Fewer repeated arguments about whose number is current</li>
+          <li>Earlier truth on risk and dependencies — while you can still steer</li>
+          <li>Faster closure on real decisions, with a record of what was decided and why</li>
+          <li>Fewer expensive surprises caused by preventable process failure</li>
+        </ol>
+        <p class="outcomes-close">
+          If your team can see the same truth, decide faster, and revise honestly — this OS is doing its job.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Author ─────────────────────────────────────────────────────────── -->
+    <section class="book-section book-section--alt" aria-labelledby="author-heading">
+      <div class="container">
+        <div class="prose-block">
+          <span class="section-label">About the author</span>
+          <h2 id="author-heading">Steve Embleton</h2>
+          <p>
+            Steve Embleton is a hardware engineering lead with over ten years running
+            mechanical, thermal, and power electronics programs from concept through production.
+            He has worked in defense sonar systems, data center infrastructure at Dell, and
+            advanced battery and power electronics at Tesla — including the 4680 cell program,
+            where he applied the methodology in this book to deliver novel high-risk R&amp;D
+            products on time. Teammates across disciplines credited the program discipline
+            directly.
+          </p>
+          <p>
+            He holds 20 granted patents and over 40 applications across liquid cooling, EMI
+            shielding, reliability systems, and transportation. He also writes
+            <a href="https://simulation.thehardwareos.com" rel="noopener">simulation training for power electronics engineers</a>.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -110,6 +191,10 @@
 
           <li class="part">
             <h3>Part I — Why Hardware Programs Break</h3>
+            <p class="part-desc">
+              The failure pattern that shows up on every program — not bad engineers, but
+              missing operating discipline. Names the dysfunction before proposing the fix.
+            </p>
             <ol class="chapter-list">
               <li>The Missing Manual</li>
               <li>Process Is the Product</li>
@@ -119,6 +204,11 @@
 
           <li class="part">
             <h3>Part II — The Hardware OS Core</h3>
+            <p class="part-desc">
+              The operating controls: ownership, spec integrity, gates that mean something,
+              automation decisions made early enough to matter, and schedules built from
+              real dependencies.
+            </p>
             <ol class="chapter-list" start="4">
               <li>DRI Ownership and Decision Authority</li>
               <li>Spec Integrity and Requirement Hygiene</li>
@@ -130,6 +220,10 @@
 
           <li class="part">
             <h3>Part III — Technical Evidence That Changes Program Decisions</h3>
+            <p class="part-desc">
+              How requirements evolve from physics, not stacked buffers. How tests and
+              models change the plan. How to define "done" in a way that survives evidence.
+            </p>
             <ol class="chapter-list" start="9">
               <li>Requirements Lifecycle: Hypothesis → Bless → Evidence → Revise</li>
               <li>Requirements from Physics, Not Stacked Buffers</li>
@@ -142,6 +236,11 @@
 
           <li class="part">
             <h3>Part IV — Running the Organization</h3>
+            <p class="part-desc">
+              What each tier actually needs — from executive to supplier. First-article
+              iteration done fast and with discipline. Supplier truth that matches what
+              build and test actually see.
+            </p>
             <ol class="chapter-list" start="15">
               <li>What Every Tier Wants: Exec to Supplier</li>
               <li>First Article: Fast, Disciplined Iteration</li>
@@ -151,6 +250,11 @@
 
           <li class="part">
             <h3>Part V — Adoption and Scale</h3>
+            <p class="part-desc">
+              Installing the OS in an organization already in motion — triage first,
+              then system. Training, cadence, and how to recover when the OS itself starts
+              to drift.
+            </p>
             <ol class="chapter-list" start="18">
               <li>Rollout Sequence: Triage Then System</li>
               <li>Training, Cadence, and Failure Recovery</li>
@@ -162,48 +266,41 @@
       </div>
     </section>
 
-    <!-- ── Author ─────────────────────────────────────────────────────────── -->
-    <section class="book-section book-section--alt" aria-labelledby="author-heading">
-      <div class="container">
-        <div class="prose-block">
-          <span class="section-label">About the author</span>
-          <h2 id="author-heading">Steve Embleton</h2>
-          <p>
-            Steve Embleton is a hardware engineering lead with experience running
-            power electronics programs from concept through production. He has worked
-            on programs where the OS described in this book was missing — and on programs
-            where it was installed partway through, under schedule pressure, and worked.
-          </p>
-          <p>
-            He also writes simulation training for power electronics engineers at
-            <a href="https://simulation.thehardwareos.com" rel="noopener">simulation.thehardwareos.com</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- ── Buy ────────────────────────────────────────────────────────────── -->
     <section class="book-section buy-section" aria-labelledby="buy-heading">
       <div class="container">
         <span class="section-label">Get the book</span>
         <h2 id="buy-heading">Available in print, ebook, and audio</h2>
         <p class="buy-sub">
+          Read online free at <a href="https://book.thehardwareos.com/">book.thehardwareos.com</a>.
           Print and ebook on Amazon. Audiobook on Audible and major platforms.
-          The ebook is also available on Apple Books, Kobo, and Google Play.
         </p>
         <div class="buy-actions">
+          <a href="https://book.thehardwareos.com/" class="btn-primary">Read online — free</a>
           <!--
-          AMAZON_HOOK — replace href and uncomment when live
-          <a href="https://amazon.com/dp/ASIN" class="btn-primary" rel="noopener" target="_blank">Buy on Amazon</a>
+          AMAZON_HOOK — replace ASIN and uncomment when live
+          <a href="https://amazon.com/dp/ASIN" class="btn-secondary" rel="noopener" target="_blank">Buy on Amazon</a>
+          -->
+          <!--
+          AUDIBLE_HOOK — replace ASIN and uncomment when live
           <a href="https://audible.com/pd/ASIN" class="btn-secondary" rel="noopener" target="_blank">Listen on Audible</a>
+          -->
+          <!--
+          APPLE_HOOK — uncomment when live
           <a href="https://books.apple.com/ASIN" class="btn-tertiary" rel="noopener" target="_blank">Apple Books</a>
           -->
-          <span class="btn-coming">Coming soon — links will appear here at launch</span>
+          <!--
+          KOBO_HOOK
+          <a href="https://www.kobo.com/ASIN" class="btn-tertiary" rel="noopener" target="_blank">Kobo</a>
+          -->
         </div>
         <!--
-        EMAIL_HOOK — uncomment and wire up to Mailchimp / ConvertKit for launch list
-        <form class="email-capture" action="#" method="post" aria-label="Email notification signup">
-          <label for="email-input" class="email-label">Notify me at launch</label>
+        EMAIL_HOOK — wire to Formspree: replace YOUR_FORM_ID, then uncomment
+        Formspree is static-site compatible — no server required.
+        Sign up at formspree.io, create a form, copy the endpoint ID.
+
+        <form class="email-capture" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Launch notification signup">
+          <label for="email-input" class="email-label">Notify me when new editions or companion material launch</label>
           <div class="email-row">
             <input id="email-input" type="email" name="email" placeholder="you@example.com" required class="email-input">
             <button type="submit" class="btn-primary">Notify me</button>
