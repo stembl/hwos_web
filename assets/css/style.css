@@ -477,44 +477,14 @@ main { flex: 1; }
 }
 
 /* --------------------------------------------------------------------------
-   Audience + Not-for two-column grid
+   Audience footnote (scope qualifier, single line)
    -------------------------------------------------------------------------- */
-.audience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s-12);
-  align-items: start;
-}
-
-.not-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-3);
-}
-
-.not-list li {
+.audience-footnote {
   font-size: var(--t-sm);
-  color: var(--c-text-muted);
-  line-height: 1.6;
-  padding-left: var(--s-4);
-  position: relative;
-}
-
-.not-list li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--c-text-subtle);
-}
-
-.not-footnote {
-  font-size: var(--t-xs);
   color: var(--c-text-subtle);
   line-height: 1.6;
-  margin-top: var(--s-5);
-  padding-top: var(--s-4);
-  border-top: 1px solid var(--c-border);
+  margin-top: var(--s-6);
+  max-width: 62ch;
 }
 
 /* --------------------------------------------------------------------------
@@ -655,7 +625,6 @@ main { flex: 1; }
   .hero { padding-block: var(--s-12) var(--s-10); }
   .hero h1 { font-size: var(--t-3xl); }
   .book-section { padding-block: var(--s-12); }
-  .audience-grid { grid-template-columns: 1fr; gap: var(--s-10); }
   .email-row { flex-direction: column; }
   .email-row .btn-primary { align-self: flex-start; }
   .site-footer .container { flex-direction: column; align-items: flex-start; }
