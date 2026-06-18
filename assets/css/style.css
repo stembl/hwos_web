@@ -613,6 +613,22 @@ main { flex: 1; }
 }
 
 /* --------------------------------------------------------------------------
+   Pre-launch notice (remove with LAUNCH_HOOK block when print/ebook go live)
+   -------------------------------------------------------------------------- */
+.prelaunch-notice {
+  font-size: var(--t-sm);
+  color: var(--c-text-muted);
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
+  border-radius: var(--r);
+  padding: var(--s-4) var(--s-5);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin-bottom: var(--s-6);
+}
+
+/* --------------------------------------------------------------------------
    Buy section link
    -------------------------------------------------------------------------- */
 .buy-sub a { color: var(--c-accent); }
