@@ -112,6 +112,9 @@ a:hover { color: var(--c-accent-hover); }
 }
 
 .site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: var(--t-sm);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -120,6 +123,13 @@ a:hover { color: var(--c-accent-hover); }
   text-decoration: none;
 }
 .site-logo:hover { color: var(--c-accent); }
+.site-logo-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
 
 /* --------------------------------------------------------------------------
    Hero
@@ -129,16 +139,27 @@ a:hover { color: var(--c-accent-hover); }
   border-bottom: 1px solid var(--c-border);
 }
 
-/* When a cover image is added, switch to:
-   .hero-layout { display: grid; grid-template-columns: auto 1fr; gap: var(--s-12); align-items: start; }
-   For now: single column */
-.hero-layout { display: block; }
+/* Cover is now active — grid layout: cover left, text right */
+.hero-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-12);
+  align-items: start;
+}
 
 .hero-cover img {
   border: 1px solid var(--c-border);
   border-radius: var(--r-lg);
   width: 220px;
   flex-shrink: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 600px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-cover { display: none; }
 }
 
 .hero-byline {
